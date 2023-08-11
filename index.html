@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/img/playstation.png">
+    <title>PlayStation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navar">
+            <img src="/img/playstation-logotype.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#">Game Controllers</a></li>
+                    <li><a href="#">VR Accessosries</a></li>
+                    <li><a href="#">Media Remotes</a></li>
+                    <li><a href="#">Others</a></li>
+                </ul>
+            </nav>
+            <img src="/img/menu.png" class="menu-icon" 
+            onclick="togglemenu()">
+        </div>
+        
+        <div class="row">
+            <div class="col-1">
+                <h2>PS5 V1<br>Controller</h2>
+                <h3>Wireless Controller for Playstation 5</h3>
+                <p>(Compitable/Generic)</p>
+                <h4>$59.95</h4>
+                <button type="button">Buy Now<img src="/img/right-arrow.png"></button></button>
+            </div>
+            <div class="col-2">
+               <img src="/img/PS5 Controller.G03.watermarked.2k.png" class="controller">
+                <div class="color-box"></div>
+                <div class="add-btn">
+                    <img src="/img/add.png" alt="">
+                    <p><small>Add to Cart</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <img src="/img/facebook-app-symbol.png" class="fb-com">
+            <img src="/img/instagram.png" class="ig-com">
+            <img src="/img/twitter.png" class="tweet">
+        </div>
+
+    </div> 
+    
+    <script>
+       var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+  if(menuList.style.maxHeight == "0px") {
+    menuList.style.maxHeight = menuList.scrollHeight + "px";
+  } else {
+    menuList.style.maxHeight = "0px";
+  }
+}
+
+var toggleButton = document.getElementById("toggleButton");
+toggleButton.addEventListener("click", togglemenu);
+    </script>
+
+</body>
+</html>     
